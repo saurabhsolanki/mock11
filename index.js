@@ -16,7 +16,7 @@ app.use("/login",loginRoute)
 
 app.get('/', (req, res) => res.send('hello'))
 
-app.listen(8080, async () => {
+app.listen(8000, async () => {
     await connect();
     console.log("mongodb connected at 8080");
     try {
