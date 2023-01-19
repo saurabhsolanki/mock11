@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
-require("dotenv").config();
-const mongo_url = process.env.mongo_url || "";
 
 const connect = () => {
-  return mongoose.connect(mongo_url);
+  return mongoose.connect("mongodb+srv://mock:mock@cluster0.bvmggaj.mongodb.net/mock");
 };
 
 module.exports = connect;

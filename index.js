@@ -5,8 +5,7 @@ const signupRoute = require('./routes/signup.routes')
 const loginRoute = require('./routes/login.route')
 const connect = require('./config/db')
 
-require("dotenv").config();
-const PORT = process.env.PORT || 8080;
+
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
@@ -17,7 +16,7 @@ app.use("/login",loginRoute)
 
 app.get('/', (req, res) => res.send('hello'))
 
-app.listen(PORT, async () => {
+app.listen(8080, async () => {
     await connect();
     console.log("mongodb connected at 8080");
     try {
